@@ -109,10 +109,10 @@ function risk_badge(string $level): string {
     border: 1px solid rgba(255, 255, 255, 0.3) !important;
     color: white !important;
 }
-.bg-gradient-primary { background: rgba(13, 110, 253, 0.5) !important; }
-.bg-gradient-success  { background: rgba(25, 135, 84, 0.5) !important; }
-.bg-gradient-info     { background: rgba(13, 202, 240, 0.5) !important; }
-.bg-gradient-warning  { background: rgba(255, 193, 7, 0.5) !important; }
+.bg-gradient-primary { background: rgba(13, 110, 253, 0.75) !important; }
+.bg-gradient-success  { background: rgba(25, 135, 84, 0.75) !important; }
+.bg-gradient-info     { background: rgba(13, 202, 240, 0.75) !important; }
+.bg-gradient-warning  { background: rgba(255, 193, 7, 0.75) !important; }
 </style>
 
 <!-- Stat cards -->
