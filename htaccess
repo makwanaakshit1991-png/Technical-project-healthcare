@@ -1,0 +1,17 @@
+Options -Indexes
+Options +FollowSymLinks
+
+# Allow access to all files
+<IfModule mod_authz_core.c>
+    Require all granted
+</IfModule>
+<IfModule !mod_authz_core.c>
+    Order allow,deny
+    Allow from all
+</IfModule>
+
+# Pretty URLs (optional)
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /shrs/
+</IfModule>

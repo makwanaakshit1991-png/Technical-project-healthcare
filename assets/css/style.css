@@ -1,0 +1,159 @@
+/* ============================================================
+   SHRS — Smart Health Record System — Main Stylesheet
+   ============================================================ */
+
+:root {
+    --shrs-primary:   #0d6efd;
+    --shrs-success:   #198754;
+    --shrs-warning:   #ffc107;
+    --shrs-danger:    #dc3545;
+    --shrs-sidebar:   #1a2340;
+    --shrs-bg:        #f0f4f8;
+    --shrs-card:      #ffffff;
+    --shrs-text:      #212529;
+    --shrs-muted:     #6c757d;
+}
+
+/* --- Layout ------------------------------------------------ */
+body {
+    background: var(--shrs-bg);
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.page-wrapper {
+    flex: 1;
+    padding: 1.5rem 1.5rem 2rem;
+}
+
+/* --- Cards ------------------------------------------------- */
+.card {
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 1px 8px rgba(0,0,0,.08);
+    transition: box-shadow .2s;
+}
+.card:hover {
+    box-shadow: 0 4px 18px rgba(0,0,0,.12);
+}
+.card-header {
+    background: transparent;
+    border-bottom: 1px solid rgba(0,0,0,.08);
+    padding: 1rem 1.25rem .75rem;
+}
+
+/* --- Stat cards -------------------------------------------- */
+.stat-card {
+    border-radius: 14px;
+    padding: 1.4rem 1.5rem;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+.stat-card .stat-icon {
+    font-size: 2.4rem;
+    opacity: .85;
+}
+.stat-card .stat-value {
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1;
+}
+.stat-card .stat-label {
+    font-size: .85rem;
+    opacity: .9;
+    margin-top: .2rem;
+}
+.bg-gradient-primary  { background: linear-gradient(135deg, #0d6efd, #0a58ca); }
+.bg-gradient-success  { background: linear-gradient(135deg, #198754, #146c43); }
+.bg-gradient-warning  { background: linear-gradient(135deg, #ffc107, #d39e00); }
+.bg-gradient-danger   { background: linear-gradient(135deg, #dc3545, #b02a37); }
+.bg-gradient-info     { background: linear-gradient(135deg, #0dcaf0, #087990); }
+.bg-gradient-purple   { background: linear-gradient(135deg, #6f42c1, #59359a); }
+
+/* --- Navbar ------------------------------------------------ */
+.navbar-brand { font-size: 1.25rem; letter-spacing: .5px; }
+.avatar-circle {
+    width: 32px; height: 32px; border-radius: 50%;
+    display: inline-flex; align-items: center; justify-content: center;
+    font-weight: 700; font-size: .9rem;
+    border: 2px solid rgba(255,255,255,.5);
+}
+
+/* --- Risk badges ------------------------------------------ */
+.risk-badge {
+    display: inline-flex; align-items: center; gap: .4rem;
+    padding: .35em .75em; border-radius: 20px;
+    font-size: .8rem; font-weight: 600; text-transform: uppercase; letter-spacing: .5px;
+}
+.risk-low      { background: #d1e7dd; color: #0f5132; }
+.risk-moderate { background: #fff3cd; color: #664d03; }
+.risk-high     { background: #f8d7da; color: #842029; }
+.risk-dot { width: 8px; height: 8px; border-radius: 50%; }
+.risk-low      .risk-dot { background: #198754; }
+.risk-moderate .risk-dot { background: #ffc107; }
+.risk-high     .risk-dot { background: #dc3545; }
+
+/* --- Tables ----------------------------------------------- */
+.table { font-size: .9rem; }
+.table th { font-weight: 600; color: var(--shrs-muted); font-size: .78rem; text-transform: uppercase; letter-spacing: .4px; }
+.table-hover tbody tr:hover { background: rgba(13,110,253,.05); }
+
+/* --- Forms ------------------------------------------------ */
+.form-label { font-weight: 600; font-size: .875rem; color: var(--shrs-text); }
+.form-control, .form-select {
+    border-radius: 8px;
+    border-color: #ced4da;
+    transition: border-color .2s, box-shadow .2s;
+}
+.form-control:focus, .form-select:focus {
+    border-color: var(--shrs-primary);
+    box-shadow: 0 0 0 .2rem rgba(13,110,253,.15);
+}
+
+/* --- Buttons ---------------------------------------------- */
+.btn { border-radius: 8px; font-weight: 500; }
+.btn-primary { background: var(--shrs-primary); border-color: var(--shrs-primary); }
+
+/* --- Login Page ------------------------------------------- */
+.login-wrapper {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #0d6efd 0%, #0a3a8a 100%);
+    display: flex; align-items: center; justify-content: center;
+}
+.login-card { border-radius: 20px; overflow: hidden; max-width: 430px; width: 100%; }
+.login-logo { font-size: 3rem; color: var(--shrs-primary); }
+
+/* --- Section headings ------------------------------------- */
+.section-title { font-size: 1.1rem; font-weight: 700; color: var(--shrs-text); margin-bottom: 1rem; }
+.section-title .bi { color: var(--shrs-primary); }
+
+/* --- Blockchain ------------------------------------------- */
+.chain-block { background: #f8f9fa; border-radius: 8px; padding: .75rem 1rem; font-size: .78rem; font-family: monospace; border-left: 4px solid var(--shrs-primary); margin-bottom: .5rem; }
+.chain-block.tampered { border-left-color: var(--shrs-danger); background: #fff5f5; }
+.chain-block.verified { border-left-color: var(--shrs-success); }
+
+/* --- Alert inline ----------------------------------------- */
+.alert { border-radius: 10px; }
+
+/* --- Pagination ------------------------------------------- */
+.pagination .page-link { border-radius: 8px !important; margin: 0 2px; }
+
+/* --- Sidebar menu (dashboard) ----------------------------- */
+.dash-nav { background: var(--shrs-card); border-radius: 12px; padding: 1rem 0; }
+.dash-nav .nav-link { color: var(--shrs-text); padding: .5rem 1.25rem; border-radius: 8px; margin: .1rem .5rem; display: flex; align-items: center; gap: .6rem; font-size: .9rem; }
+.dash-nav .nav-link:hover, .dash-nav .nav-link.active { background: rgba(13,110,253,.1); color: var(--shrs-primary); font-weight: 600; }
+.dash-nav .nav-link .bi { font-size: 1.1rem; }
+
+/* --- Progress bar ----------------------------------------- */
+.risk-progress { height: 8px; border-radius: 4px; }
+
+/* --- Responsive ------------------------------------------- */
+@media (max-width: 768px) {
+    .stat-card { padding: 1rem; }
+    .stat-card .stat-value { font-size: 1.5rem; }
+    .page-wrapper { padding: 1rem; }
+}
