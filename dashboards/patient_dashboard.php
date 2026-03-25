@@ -101,11 +101,25 @@ function risk_badge(string $level): string {
         <i class="bi bi-calendar-plus me-2"></i>Book Appointment
     </a>
 </div>
+<style>
+.stat-card {
+    background: rgba(255, 255, 255, 0.15) !important;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3) !important;
+    color: white !important;
+}
+.bg-gradient-primary { background: rgba(13, 110, 253, 0.5) !important; }
+.bg-gradient-success  { background: rgba(25, 135, 84, 0.5) !important; }
+.bg-gradient-info     { background: rgba(13, 202, 240, 0.5) !important; }
+.bg-gradient-warning  { background: rgba(255, 193, 7, 0.5) !important; }
+</style>
 
 <!-- Stat cards -->
 <div class="row g-3 mb-4">
     <div class="col-6 col-md-3">
         <div class="stat-card bg-gradient-primary">
+            
             <div class="stat-icon"><i class="bi bi-calendar3"></i></div>
             <div><div class="stat-value"><?= $appt_count ?></div><div class="stat-label">Upcoming Appts</div></div>
         </div>
